@@ -31,13 +31,13 @@ int main() // la variable principal del programa de inicializacion
 
     printf("\n");
     printf("---Esta es la Matriz transpuesta--- \n");
-    for (int i = 0; i < m; i++)
+    for (int i = 0; i < m; i++)//se realiza el primer for para la matriz compuesta
     {
         printf("\n");
-        for (int j = 0; j < n; j++)
+        for (int j = 0; j < n; j++)//se realiza el segundo for 
         {
-            matrix2[i][j] = matrix[j][i];
-            printf("%d \t", matrix2[i][j]);
+            matrix2[i][j] = matrix[j][i];// se invierta la matriz con las filas y columas hevha anteriormente con los numeros random
+            printf("%d \t", matrix2[i][j]);//se inprime la matriz transpuesta
         }
         
     }
