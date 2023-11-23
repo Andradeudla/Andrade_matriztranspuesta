@@ -4,18 +4,20 @@
 
 int main() // la variable principal del programa de inicializacion
 {
+    printf("----------Bienvenido al Programa de Matriz Transpuesta---------- \n");
+    
     int n, m;                                // se define las variables para filas y columnas
     printf("ingrese el valor para filas: "); // se solicita al usuario ingresar el numero de filas
     scanf("%d", &n);                         // se lee los datos ingresados por el usuario
 
-    printf("ingrese el valor para columnas"); // se solicita al usuario ingresar el numero de columnas
+    printf("ingrese el valor para columnas: "); // se solicita al usuario ingresar el numero de columnas
     scanf("%d", &m);                          // se lee los datos ingresados por el usuario
 
     int matrix[n][m]; // se define las variables con el numero de espacios ingresados por el usuario de filas y columnas.
-    int matrix2[n][m]; //Se define las variables de la matriz transpuesta
+    int matrix2[m][n]; //Se define las variables de la matriz transpuesta
+    srand(time(NULL)); //se crea la funcion para numeros randoms
 
-    printf("----------Bienvenido al Programa de Matriz Transpuesta----------");
-    printf("---Esta es la Matriz Original---");
+    printf("---Esta es la Matriz Original--- \n");
 
     for (int i = 0; i < n; i++)//se crea el primerfor para la matriz original de las filas
     {
@@ -26,6 +28,20 @@ int main() // la variable principal del programa de inicializacion
             printf("%d \t", matrix[i][j]); // se inprimer la matriz con numeros random
         }
     }
+
+    printf("\n");
+    printf("---Esta es la Matriz transpuesta--- \n");
+    for (int i = 0; i < m; i++)
+    {
+        printf("\n");
+        for (int j = 0; j < n; j++)
+        {
+            matrix2[i][j] = matrix[j][i];
+            printf("%d \t", matrix2[i][j]);
+        }
+        
+    }
+    
 
     return 0;
 }
